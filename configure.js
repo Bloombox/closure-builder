@@ -41,8 +41,8 @@ let gcsVersion = 'v1.5.0';
 let gcsDoc = 'https://raw.githubusercontent.com/google/closure-stylesheets/';
 remoteTools.getFiles(
   'Google Closure Stylesheets', [
-    gcs + gcsVersion + '/closure-stylesheets.jar',
-    gcs + gcsVersion + '/closure-stylesheets-library.jar',
+    'https://storage.googleapis.com/bloom-software/closure-stylesheets.jar',
+    'https://storage.googleapis.com/bloom-software/closure-stylesheets-library.jar',
     gcsDoc + 'master/LICENSE',
     gcsDoc + 'master/README.md'],
   path.join('.', 'runtime', 'closure-stylesheets')
