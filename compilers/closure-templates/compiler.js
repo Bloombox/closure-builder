@@ -104,7 +104,6 @@ ClosureTemplates.compile = function(files, opt_options, opt_target_dir,
   // Handling custom i18n
   if (options.i18n) {
     options.shouldGenerateGoogMsgDefs = true;
-    options.shouldProvideRequireSoyNamespaces = true;
     options.googMsgsAreExternal = true;
     options.bidiGlobalDir = 1;
     i18nFunction = options.i18n;
