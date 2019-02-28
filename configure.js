@@ -31,7 +31,7 @@ let googdl = 'https://dl.google.com/';
 // Download and prepare Google Closure Templates Compiler
 remoteTools.getZip(
   'Google Closure Templates Compiler',
-  googdl + 'closure-templates/closure-templates-for-javascript-latest.zip',
+  'https://storage.googleapis.com/bloom-software/closure-templates-for-javascript-latest.zip',
   path.join('.', 'runtime', 'closure-templates-compiler')
 );
 
