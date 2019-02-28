@@ -196,12 +196,6 @@ BuildCompilers.compileSoyTemplates = function(files, out,
   let config = (opt_options && opt_options.config) ?
     opt_options.config : false;
   let message = 'Compiling ' + files.length + ' soy files to ' + out;
-  if (typeof options.shouldProvideRequireSoyNamespaces === 'undefined') {
-    options.shouldProvideRequireSoyNamespaces = true;
-  }
-  if (typeof options.shouldGenerateJsdoc === 'undefined') {
-    options.shouldGenerateJsdoc = true;
-  }
   if (config) {
     config.setMessage(message);
     if (config.i18n) {
