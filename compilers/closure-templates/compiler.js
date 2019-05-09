@@ -56,7 +56,7 @@ ClosureTemplates.compile = function(files, opt_options, opt_target_dir,
     return;
   }
 
-  let compiler = pathTools.getClosureTemplatesCompilerJar();
+  let compiler = pathTools.getClosureTemplatesCompilerJar(opt_options.incrementalDOM || false);
   let compilerOptions = [];
   let i18nFunction = null;
   let options = opt_options || {};
