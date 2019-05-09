@@ -201,9 +201,13 @@ PathTools.getClosureTemplatesCompilerPath = function() {
 /**
  * @return {!string}
  */
-PathTools.getClosureTemplatesCompilerJar = function() {
+PathTools.getClosureTemplatesCompilerJar = function(incrementalDOM) {
+  let useIncremental = incrementalDOM || false;
+  if (useIncremental) log.info('Using incremental DOM compiler...');
+  else log.info('Using Soy to JS compiler...');
   let searchPath = PathTools.getClosureTemplatesCompilerPath();
-  let compilerJar = path.join(searchPath, 'SoyToJsSrcCompiler.jar');
+  let compilerJar = path.join(searchPath,
+                              useIncremental ? 'SoyToIncrementalDomSrcCompiler.jar' : 'SoyToJsSrcCompiler.jar');
   if (!PathTools.existFile(compilerJar)) {
     compilerJar = PathTools.searchFile(
       searchPath, 'SoyToJsSrcCompiler', '.jar');
